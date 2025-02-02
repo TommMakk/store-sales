@@ -9,15 +9,17 @@ from store_sales.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
 app = typer.Typer()
 
 
+
 @app.command()
 def main(
     # ---- REPLACE DEFAULT PATHS AS APPROPRIATE ----
-    input_path: Path = RAW_DATA_DIR / "dataset.csv",
+    input_path: Path = RAW_DATA_DIR / "oil.csv",
     output_path: Path = PROCESSED_DATA_DIR / "dataset.csv",
     # ----------------------------------------------
 ):
     # ---- REPLACE THIS WITH YOUR OWN CODE ----
     logger.info("Processing dataset...")
+    print(input_path)
     for i in tqdm(range(10), total=10):
         if i == 5:
             logger.info("Something happened for iteration 5.")
