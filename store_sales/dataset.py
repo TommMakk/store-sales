@@ -4,10 +4,10 @@ import typer
 from loguru import logger
 from tqdm import tqdm
 
-from store_sales.config import PROCESSED_DATA_DIR, RAW_DATA_DIR
+from store_sales.config import PROCESSED_DATA_DIR, RAW_DATA_DIR, PROJ_ROOT
+import os
 
 app = typer.Typer()
-
 
 
 @app.command()
@@ -19,7 +19,8 @@ def main(
 ):
     # ---- REPLACE THIS WITH YOUR OWN CODE ----
     logger.info("Processing dataset...")
-    print(input_path)
+    A = Path(__file__).resolve().parents[1]
+    logger.info(f"PROJ_ROOT path is: {PROJ_ROOT}")
     for i in tqdm(range(10), total=10):
         if i == 5:
             logger.info("Something happened for iteration 5.")
