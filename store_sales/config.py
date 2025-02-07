@@ -7,7 +7,8 @@ import os
 load_dotenv()
 
 # Paths
-PROJ_ROOT = os.getenv("project_dir")
+PROJ_ROOT = "/home/user/Repos/store_sales/store_sales"
+#PROJ_ROOT = os.getenv("project_dir")
 #PROJ_ROOT = Path(__file__).resolve().parents[1]
 print(PROJ_ROOT)
 DATA_DIR = PROJ_ROOT / "data"
