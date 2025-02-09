@@ -7,16 +7,16 @@ import os
 load_dotenv()
 
 # Paths
-PROJ_ROOT = "/home/user/Repos/store_sales/store_sales"
-#PROJ_ROOT = os.getenv("project_dir")
-#PROJ_ROOT = Path(__file__).resolve().parents[1]
-print(PROJ_ROOT)
+#PROJ_ROOT = "/home/user/Repos/store_sales/store_sales"
+#PROJ_ROOT = Path(os.getenv("project_dir"))
+PROJ_ROOT = Path(__file__).resolve().parents[1]
+#print(PROJ_ROOT)
 DATA_DIR = PROJ_ROOT / "data"
 RAW_DATA_DIR = str(DATA_DIR / "raw")
 INTERIM_DATA_DIR = DATA_DIR / "interim"
 PROCESSED_DATA_DIR = DATA_DIR / "processed"
 EXTERNAL_DATA_DIR = DATA_DIR / "external"
-
+print(RAW_DATA_DIR)
 MODELS_DIR = PROJ_ROOT / "models"
 REPORTS_DIR = PROJ_ROOT / "reports"
 FIGURES_DIR = REPORTS_DIR / "figures"
