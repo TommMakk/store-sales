@@ -20,6 +20,7 @@ def main(
     logger.info("Processing dataset...")
     for i in tqdm(range(10), total=10):
         if i == 5:
+            logger.info(RAW_DATA_DIR)
             logger.info("Something happened for iteration 5.")
     logger.success("Processing dataset complete.")
     # -----------------------------------------
